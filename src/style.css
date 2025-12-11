@@ -1,0 +1,163 @@
+/* Общие стили */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: #5974ff;
+    color: #fff;
+}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 40px;
+    align-items: center;
+}
+
+.nav {
+    display: flex;
+    gap: 25px;
+}
+
+.nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Hero */
+.hero {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.features-top {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 25px;
+}
+
+.feature-btn {
+    background: linear-gradient(180deg, #ff723a, #b63400);
+    padding: 15px 25px;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+.main-btn {
+    margin-top: 35px;
+    padding: 20px 40px;
+    font-size: 22px;
+    border: none;
+    cursor: pointer;
+    color: white;
+    border-radius: 25px;
+    background: linear-gradient(180deg, #ff7032, #b32f00);
+}
+
+/*Grid Features*/
+.grid-features {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    padding: 50px 0;
+}
+
+.grid-item {
+    width: 260px;
+    background: linear-gradient(180deg, #ff5d2a, #b02d00);
+    padding: 25px;
+    border-radius: 15px;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Prices */
+.prices {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.price-cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    padding: 40px 0;
+}
+
+.price-card {
+    width: 250px;
+    padding: 25px;
+    background: linear-gradient(180deg, #ff612f, #a92800);
+    border-radius: 15px;
+}
+
+/* Footer */
+.footer {
+    margin-top: 60px;
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+    gap: 70px;
+}
+/* =============================== */
+/*       HOVER ДЛЯ КНОПОК          */
+/* =============================== */
+
+.nav a:hover,
+.feature-btn:hover,
+.main-btn:hover {
+    background: rgba(255,255,255,0.2);
+    transition: 0.25s;
+    border-radius: 10px;
+}
+
+
+/* =============================== */
+/*        АНИМАЦИЯ ПОКАЧИВАНИЯ     */
+/* =============================== */
+
+@keyframes tilt {
+    0% { transform: scale(1) rotate(0deg); }
+    25% { transform: scale(1.03) rotate(1deg); }
+    50% { transform: scale(1.03) rotate(-1deg); }
+    75% { transform: scale(1.03) rotate(1deg); }
+    100% { transform: scale(1) rotate(0deg); }
+}
+
+
+/* =============================== */
+/*     УВЕЛИЧЕНИЕ + ПОКАЧИВАНИЕ    */
+/* =============================== */
+
+.grid-item:hover,
+.price-card:hover {
+    transform: scale(1.05);
+    animation: tilt 0.5s ease-in-out;
+    transition: 0.3s;
+}
+.iframe-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 30px 0;
+}
+
+/* Адаптивный iframe */
+.iframe-wrapper iframe {
+    max-width: 100%;
+    border-radius: 12px;
+}
+
+/* На телефонах — 100% ширины */
+@media (max-width: 600px) {
+    .iframe-wrapper iframe {
+        width: 100%;
+        height: 250px;
+    }
+}
